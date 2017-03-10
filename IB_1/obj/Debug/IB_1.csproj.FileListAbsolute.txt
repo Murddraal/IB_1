@@ -1,0 +1,9 @@
+D:\Git\IB_1\IB_1\bin\Debug\IB_1.exe.config
+D:\Git\IB_1\IB_1\bin\Debug\IB_1.exe
+D:\Git\IB_1\IB_1\bin\Debug\IB_1.pdb
+D:\Git\IB_1\IB_1\obj\Debug\IB_1.csprojResolveAssemblyReference.cache
+D:\Git\IB_1\IB_1\obj\Debug\IB_1.Form1.resources
+D:\Git\IB_1\IB_1\obj\Debug\IB_1.Properties.Resources.resources
+D:\Git\IB_1\IB_1\obj\Debug\IB_1.csproj.GenerateResource.Cache
+D:\Git\IB_1\IB_1\obj\Debug\IB_1.exe
+D:\Git\IB_1\IB_1\obj\Debug\IB_1.pdb
