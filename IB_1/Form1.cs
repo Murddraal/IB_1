@@ -40,7 +40,7 @@ namespace IB_1
                     txtbx_path.Text = openFileDialog1.InitialDirectory + openFileDialog1.FileName;
 
                     Bits_messege = new BitArray(Mess_Byte);
-                    RIPEMD320.Reverse_Byte(ref Bits_messege);
+                    MD5.Reverse_Byte(ref Bits_messege);
                     txtbx_bit_form.Text = String.Concat(from M in Mess_Byte select Convert.ToString(M, 2) + "  ");
 
                     //label_count_bits.Text += Bits_messege.Count.ToString();
@@ -63,11 +63,11 @@ namespace IB_1
 
         private void btn_hash_Click(object sender, EventArgs e)
         {
-            var RIPEMD = new RIPEMD320();
-            RIPEMD.prepear(Bits_messege);
-            Hash = RIPEMD.Hashing();
-
-            txtbx_hash.Text = String.Concat(from H in Hash select H.ToString("X") + "   ");
+            var md5 = new MD5();
+            md5.prepear(Bits_messege);
+            Hash = md5.Hashing();
+            
+            txtbx_hash.Text = String.Concat(from H in Hash select String.Format("{0:X}", H) + "   ");
             //if (checkBox1.Checked && !journal.Contains(Hash))
             //{
             //    journal.add_header(Hash);
