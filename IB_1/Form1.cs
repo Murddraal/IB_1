@@ -17,7 +17,7 @@ namespace IB_1
 
         byte[] Mess_Byte;
         BitArray Bits_messege;
-        UInt32[] Hash;
+        ulong[] Hash;
         int[] info_for_graph = new int[80];
         public string messege;
         //Journal journal = new Journal();
@@ -40,7 +40,7 @@ namespace IB_1
                     txtbx_path.Text = openFileDialog1.InitialDirectory + openFileDialog1.FileName;
 
                     Bits_messege = new BitArray(Mess_Byte);
-                    RIPEMD320.Reverse_Byte(ref Bits_messege);
+                    SHA384.Reverse_Byte(ref Bits_messege);
                     txtbx_bit_form.Text = String.Concat(from M in Mess_Byte select Convert.ToString(M, 2) + "  ");
 
                     //label_count_bits.Text += Bits_messege.Count.ToString();
@@ -63,9 +63,9 @@ namespace IB_1
 
         private void btn_hash_Click(object sender, EventArgs e)
         {
-            var RIPEMD = new RIPEMD320();
-            RIPEMD.prepear(Bits_messege);
-            Hash = RIPEMD.Hashing();
+            var SHA = new SHA384();
+            SHA.prepare(Bits_messege);
+            Hash = SHA.Hashing();
 
             txtbx_hash.Text = String.Concat(from H in Hash select H.ToString("X") + "   ");
             //if (checkBox1.Checked && !journal.Contains(Hash))
